@@ -1,0 +1,25 @@
+---
+import Dropdown, { type TOption } from "../../components/common/dropdown";
+import Link from "../../components/common/link";
+import { FaGlobe } from "react-icons/fa";
+
+const availableLanguages: TOption[] = [
+  {
+    id: "en",
+    label: "English",
+  },
+  {
+    id: "it",
+    label: "Italian",
+  },
+];
+---
+
+<div class="w-full h-32">
+  <div class="bg-slate-950 flex justify-between px-4">
+    <Link label="all dune games" path="/" client:idle />
+    <Dropdown options={availableLanguages} client:idle>
+      <FaGlobe />
+    </Dropdown>
+  </div>
+</div>
